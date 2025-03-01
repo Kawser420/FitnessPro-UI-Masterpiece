@@ -1,0 +1,9 @@
+/* google fonts here  */
+
+body {
+  background-color: gainsboro;
+}
+/* shared styles is there  */
+.display-flex {
+  display: flex;
+}
