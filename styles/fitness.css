@@ -3,6 +3,11 @@
 body {
   background-color: rgba(0, 0, 0, 0.911);
 }
+
+main {
+  max-width: 100%;
+  margin: 0 auto;
+}
 /* shared styles is there  */
 .display-flex {
   display: flex;
@@ -14,10 +19,15 @@ body {
 .title-primary {
   color: #ffffff;
 }
-
-main {
-  max-width: 80%;
-  margin: 0 auto;
+.description-paragraph-primary {
+  color: rgba(255, 255, 255, 0.5);
+}
+.btn-primary {
+  background-color: #e6533c;
+  padding: 11px 22px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
 }
 
 /* header style and navbar css  */
@@ -25,10 +35,11 @@ main {
   font-weight: 600;
   font-size: 3rem;
 }
-
-.navbar {
-  width: 80%;
+header {
+  max-width: 80%;
   margin: 0 auto;
+}
+.navbar {
   justify-content: space-between;
   align-items: center;
 }
@@ -51,4 +62,47 @@ main {
   background-color: #e6533c;
   padding: 3px 15px;
   border-radius: 20px;
+}
+/* banner style  */
+.banner {
+  gap: 120px;
+}
+.banner-content {
+  width: 50%;
+}
+.banner-title {
+  font-weight: 700;
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+/* button  */
+.btn-apk-download {
+  background-color: rgba(0, 0, 0, 0.788);
+  margin-left: 20px;
+  padding: 11px 22px;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+
+.banner-img img {
+  width: 100%;
+}
+
+/* gym content video and workout video style */
+
+.dot {
+  width: 35px;
+  height: 35px;
+  background-color: #e6533c;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px 5px 0 0;
+}
+.gym-video-number {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+.gym-total-video {
+  margin-top: 1px;
 }
