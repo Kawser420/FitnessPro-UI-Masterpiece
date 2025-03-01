@@ -1,9 +1,54 @@
 /* google fonts here  */
 
 body {
-  background-color: gainsboro;
+  background-color: rgba(0, 0, 0, 0.911);
 }
 /* shared styles is there  */
 .display-flex {
   display: flex;
+}
+
+.text-primary {
+  color: #e6533c;
+}
+.title-primary {
+  color: #ffffff;
+}
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* header style and navbar css  */
+.brand {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.navbar {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item {
+  list-style: none;
+  margin-right: 35px;
+}
+.nav-links {
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 3px 0px 3px 0px;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#home-nav {
+  /* padding: 10px; */
+  background-color: #e6533c;
+  padding: 3px 15px;
+  border-radius: 20px;
 }
