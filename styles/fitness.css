@@ -125,3 +125,26 @@ header {
   margin-top: 4px;
   margin-bottom: 4px;
 }
+
+#btn-test-2 {
+  position: absolute;
+  margin-top: 190px;
+  margin-left: -80px;
+  padding: 5px 20px;
+  background-color: rgba(48, 48, 48, 0.54);
+  border: 1px dotted gray;
+  border-radius: 10px;
+}
+.gym-workout-video-number {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-right: 80px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+.gym-total-workout-video {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
