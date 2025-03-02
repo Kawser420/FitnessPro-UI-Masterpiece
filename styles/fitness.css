@@ -148,3 +148,33 @@ header {
   margin-top: 3px;
   margin-bottom: 5px;
 }
+
+@media screen and (max-width: 576px) {
+  .navbar,
+  .banner {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .banner-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .banner-img {
+    margin-top: -100px;
+  }
+  .banner-img img {
+    width: 100%;
+    position: relative;
+  }
+  #btn-test {
+    position: absolute;
+    margin-top: 250px;
+    margin-left: -350px;
+  }
+  #btn-test-2 {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -150px;
+  }
+}
