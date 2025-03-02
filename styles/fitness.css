@@ -381,6 +381,16 @@ option {
     color: khaki;
     width: 190px;
   }
+  .meet-member {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .meet-trainer img {
+    position: relative;
+    border-radius: 20px;
+    width: 280px;
+    height: 200px;
+  }
 }
 
 /* medium device responsive  */
@@ -433,5 +443,15 @@ option {
   .bmi-calculator {
     flex-direction: column;
     gap: 20px;
+  }
+  .meet-member {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .meet-trainer img {
+    position: relative;
+    border-radius: 20px;
+    width: 280px;
+    height: 200px;
   }
 }
