@@ -221,6 +221,59 @@ header {
 .running-img img {
   width: 400px;
 }
+/* BMI calculator style  */
+.bmi {
+  max-width: 75%;
+  margin: 0 auto;
+}
+.bmi-calculator {
+  background-color: #222222;
+  border: 1px dotted gray;
+  border-radius: 15px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.bmi-calculator-chart {
+  width: 400px;
+}
+.bmi-calculator-bmi {
+  width: 400px;
+}
+.table-title {
+  font-weight: 600;
+  align-items: center;
+}
+th,
+td {
+  border: 1px solid gray;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.table-description {
+  margin-top: 10px;
+}
+
+input,
+select {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.select-hw {
+  color: yellowgreen;
+  width: 190px;
+}
+.select-wh {
+  color: khaki;
+  width: 387px;
+}
+option {
+  background-color: black;
+}
+
 @media screen and (max-width: 576px) {
   .navbar,
   .banner {
