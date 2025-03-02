@@ -322,6 +322,19 @@ option {
   .running-img img {
     width: 300px;
   }
+  .bmi-calculator {
+    flex-direction: column;
+  }
+  .bmi-calculator-chart {
+    width: 200px;
+  }
+  .bmi-calculator-bmi {
+    width: 200px;
+  }
+  .select-wh {
+    color: khaki;
+    width: 190px;
+  }
 }
 
 /* medium device responsive  */
@@ -370,5 +383,9 @@ option {
   }
   .running-img img {
     width: 300px;
+  }
+  .bmi-calculator {
+    flex-direction: column;
+    gap: 20px;
   }
 }
