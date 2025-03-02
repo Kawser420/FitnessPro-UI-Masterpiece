@@ -196,6 +196,31 @@ header {
   margin-top: 7px;
 }
 
+/* run and extra run style  */
+.run {
+  background-color: #222222;
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px dotted gray;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.run-habit {
+  align-items: center;
+  justify-content: center;
+  gap: 180px;
+}
+.run-info {
+  width: 400px;
+}
+.run-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.running-img img {
+  width: 400px;
+}
 @media screen and (max-width: 576px) {
   .navbar,
   .banner {
