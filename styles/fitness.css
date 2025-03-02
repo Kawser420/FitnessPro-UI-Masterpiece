@@ -287,6 +287,39 @@ option {
   background-color: black;
 }
 
+/* meet trainer style  */
+.meet {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.meet-member {
+  background-color: #222222;
+  padding: 20px;
+  border-radius: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.meet-trainer img {
+  position: relative;
+  border-radius: 20px;
+  width: 330px;
+  height: 260px;
+}
+#meet-image-title {
+  position: absolute;
+  margin-top: -110px;
+  margin-left: 20px;
+}
+
+.meet-title {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.meet-description {
+  margin-top: 1px;
+}
 @media screen and (max-width: 576px) {
   .navbar,
   .banner {
