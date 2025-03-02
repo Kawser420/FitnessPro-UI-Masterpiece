@@ -86,23 +86,42 @@ header {
 
 .banner-img img {
   width: 100%;
+  position: relative;
 }
 
 /* gym content video and workout video style */
 
+#btn-test {
+  position: absolute;
+  margin-top: 430px;
+  margin-left: -450px;
+  padding: 5px 20px;
+  background-color: rgba(48, 48, 48, 0.54);
+  border: 1px dotted gray;
+  border-radius: 10px;
+}
+.btn-info {
+  align-items: center;
+  gap: 10px;
+}
 .dot {
   width: 35px;
   height: 35px;
   background-color: #e6533c;
   border-radius: 50%;
   display: inline-block;
-  margin: 20px 5px 0 0;
+  margin-top: 10px;
 }
 .gym-video-number {
   font-weight: 600;
   font-size: 1.8rem;
-  margin-bottom: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 35px;
 }
 .gym-total-video {
-  margin-top: 1px;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
