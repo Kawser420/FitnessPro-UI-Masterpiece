@@ -178,3 +178,34 @@ header {
     margin-left: -150px;
   }
 }
+
+/* medium device responsive  */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .navbar,
+  .banner {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .banner-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .banner-img {
+    margin-top: -100px;
+  }
+  .banner-img img {
+    width: 100%;
+    position: relative;
+  }
+  #btn-test {
+    position: absolute;
+    margin-top: 650px;
+    margin-left: -600px;
+  }
+  #btn-test-2 {
+    position: absolute;
+    margin-top: 190px;
+    margin-left: -270px;
+  }
+}
