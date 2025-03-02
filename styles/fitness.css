@@ -258,6 +258,17 @@ header {
     max-width: 240px;
     margin: 0 auto;
   }
+  .run-habit {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .run-info {
+    width: 240px;
+  }
+
+  .running-img img {
+    width: 300px;
+  }
 }
 
 /* medium device responsive  */
@@ -297,5 +308,14 @@ header {
   .card-habit {
     max-width: 240px;
     margin: 0 auto;
+  }
+  .run-habit {
+    gap: 30px;
+  }
+  .run-info {
+    width: 250px;
+  }
+  .running-img img {
+    width: 300px;
   }
 }
