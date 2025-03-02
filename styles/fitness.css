@@ -8,11 +8,16 @@ main {
   max-width: 100%;
   margin: 0 auto;
 }
+main > section {
+  margin-bottom: 100px;
+}
 /* shared styles is there  */
 .display-flex {
   display: flex;
 }
-
+.display-grid {
+  display: grid;
+}
 .text-primary {
   color: #e6533c;
 }
@@ -38,6 +43,9 @@ main {
 header {
   max-width: 80%;
   margin: 0 auto;
+}
+.header {
+  margin-bottom: 50px;
 }
 .navbar {
   justify-content: space-between;
@@ -147,6 +155,45 @@ header {
   font-size: 1rem;
   margin-top: 3px;
   margin-bottom: 5px;
+}
+
+/* habit section style  */
+.habit-section {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.habit-title {
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+.habit-instruction {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.habit-management {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-habit {
+  max-width: 240px;
+  margin-top: 15px;
+}
+.card-details {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-details img {
+  border-radius: 50%;
+}
+.habit-name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.habit-description {
+  margin-top: 7px;
 }
 
 @media screen and (max-width: 576px) {
