@@ -224,6 +224,15 @@ header {
     margin-top: 50px;
     margin-left: -150px;
   }
+  /* habit section  */
+  .habit-management {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .card-habit {
+    max-width: 240px;
+    margin: 0 auto;
+  }
 }
 
 /* medium device responsive  */
@@ -254,5 +263,14 @@ header {
     position: absolute;
     margin-top: 190px;
     margin-left: -270px;
+  }
+  .habit-management {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .card-habit {
+    max-width: 240px;
+    margin: 0 auto;
   }
 }
