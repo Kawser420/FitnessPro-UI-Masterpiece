@@ -356,6 +356,8 @@ footer {
 .copy {
   text-align: center;
 }
+
+/* mobile device responsive  */
 @media screen and (max-width: 576px) {
   .navbar,
   .banner {
@@ -426,6 +428,14 @@ footer {
     border-radius: 20px;
     width: 280px;
     height: 200px;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .footer-area {
+    width: 200px;
   }
 }
 
