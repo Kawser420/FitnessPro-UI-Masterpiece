@@ -320,6 +320,42 @@ option {
 .meet-description {
   margin-top: 1px;
 }
+/* footer style here  */
+footer {
+  background-color: #222222;
+  padding: 20px;
+}
+#brand-footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.footer-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.footer-content {
+  gap: 150px;
+}
+.footer-area {
+  width: 400px;
+}
+.footer-p-first {
+  margin-bottom: 20px;
+}
+.footer-link {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.hr {
+  width: 80%;
+  margin: 0 auto;
+}
+.new-hr {
+  border: 1px dotted gray;
+}
+.copy {
+  text-align: center;
+}
 @media screen and (max-width: 576px) {
   .navbar,
   .banner {
