@@ -47,7 +47,15 @@ header {
 .header {
   margin-bottom: 50px;
 }
+.menubar {
+  display: none;
+}
+.menubar i {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
 .navbar {
+  position: relative;
   justify-content: space-between;
   align-items: center;
 }
@@ -359,7 +367,12 @@ footer {
 
 /* mobile device responsive  */
 @media screen and (max-width: 576px) {
-  .navbar,
+  .navbar ul {
+    display: none;
+  }
+  .menubar {
+    display: block;
+  }
   .banner {
     flex-direction: column;
     max-width: 100%;
