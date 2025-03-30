@@ -445,7 +445,7 @@ footer {
   .footer-content {
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 21px;
   }
   .footer-area {
     width: 200px;
