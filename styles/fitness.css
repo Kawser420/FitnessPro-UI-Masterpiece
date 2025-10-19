@@ -1836,18 +1836,119 @@ footer {
     padding: 0 15px;
   }
 
-  .navbar ul {
+  /* ===== MOBILE NAVBAR ===== */
+  .navbar {
+    position: relative;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--surface-color);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 30px 30px;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    box-shadow: var(--shadow-lg);
+    border-right: 1px solid var(--border-color);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--gradient);
+  }
+
+  .nav-item {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--card-color);
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  .nav-link::before {
     display: none;
   }
 
+  .nav-link:hover,
+  .nav-link.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+
+  #home-nav {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
   .menubar {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--gradient);
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .menubar i {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  /* Overlay when menu is open */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-actions .btn-secondary {
     display: none;
   }
 
+  /* ===== EXISTING MOBILE STYLES ===== */
   .banner {
     flex-direction: column;
     gap: 40px;
@@ -1997,5 +2098,5 @@ footer {
 
 /* Large Devices */
 @media screen and (min-width: 1025px) {
-  /* Add any specific large device styles here */
+  /* Add large device styles here */
 }

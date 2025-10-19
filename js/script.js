@@ -1,4 +1,4 @@
-// Fitness Pro - JavaScript for Enhanced Functionality
+// Fitness Pro - JavaScript Code
 
 document.addEventListener("DOMContentLoaded", function () {
   // Loading Screen
@@ -42,35 +42,52 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.setAttribute("data-theme", savedTheme);
   }
 
-  // Mobile Menu Toggle
+  // Mobile Menu Functionality
   const menubar = document.querySelector(".menubar");
   const navLinks = document.querySelector(".nav-links");
+  const navOverlay = document.createElement("div");
+  const navClose = document.createElement("button");
 
-  menubar.addEventListener("click", function () {
+  // Create overlay for mobile menu
+  navOverlay.className = "nav-overlay";
+  document.body.appendChild(navOverlay);
+
+  // Create close button for mobile menu
+  navClose.className = "nav-close";
+  navClose.innerHTML = '<i class="fas fa-times"></i>';
+  navLinks.appendChild(navClose);
+
+  // Toggle mobile menu
+  function toggleMobileMenu() {
     navLinks.classList.toggle("active");
+    navOverlay.classList.toggle("active");
+    document.body.style.overflow = navLinks.classList.contains("active")
+      ? "hidden"
+      : "";
+  }
 
-    // Toggle menu icon
-    const icon = this.querySelector("i");
-    if (icon.classList.contains("fa-bars")) {
-      icon.classList.remove("fa-bars");
-      icon.classList.add("fa-times");
-    } else {
-      icon.classList.remove("fa-times");
-      icon.classList.add("fa-bars");
-    }
-  });
+  // Event listeners for mobile menu
+  menubar.addEventListener("click", toggleMobileMenu);
+  navClose.addEventListener("click", toggleMobileMenu);
+  navOverlay.addEventListener("click", toggleMobileMenu);
 
   // Close mobile menu when clicking on a link
   const navItems = document.querySelectorAll(".nav-link");
   navItems.forEach((item) => {
     item.addEventListener("click", function () {
       if (window.innerWidth <= 768) {
-        navLinks.classList.remove("active");
-        const icon = menubar.querySelector("i");
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
+        toggleMobileMenu();
       }
     });
+  });
+
+  // Close mobile menu on window resize
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove("active");
+      navOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    }
   });
 
   // Active Navigation Link
@@ -385,7 +402,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", animateStats);
-  // Trigger on load if banner is already in view
+  // Trigger on load
   animateStats();
 
   // Parallax Effect for Banner
