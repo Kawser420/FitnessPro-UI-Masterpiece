@@ -1,7 +1,7 @@
-/* ===== GOOGLE FONTS ===== */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800andfamily=Poppins:wght@300;400;500;600;700;800;900anddisplay=swap");
 
-/* ===== CSS VARIABLES FOR THEMES ===== */
+/* CSS VARIABLES FOR THEME */
 :root {
   /* Default Theme (Dark) */
   --primary-color: #e6533c;
@@ -93,7 +93,7 @@
   --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* ===== BASE STYLES ===== */
+/* BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -119,7 +119,7 @@ body {
   padding: 0 20px;
 }
 
-/* ===== LOADING SCREEN ===== */
+/* LOADING SCREEN */
 .loading-screen {
   position: fixed;
   top: 0;
@@ -177,7 +177,7 @@ body {
   font-size: 14px;
 }
 
-/* ===== TYPOGRAPHY ===== */
+/* TYPOGRAPHY */
 h1,
 h2,
 h3,
@@ -235,7 +235,7 @@ h6 {
   font-size: 1.1rem;
 }
 
-/* ===== BUTTONS ===== */
+/* BUTTONS */
 .btn-primary {
   background: var(--gradient);
   color: white;
@@ -347,7 +347,7 @@ h6 {
   }
 }
 
-/* ===== LAYOUT UTILITIES ===== */
+/* LAYOUT UTILITIES */
 .display-flex {
   display: flex;
 }
@@ -356,7 +356,7 @@ h6 {
   display: grid;
 }
 
-/* ===== THEME SWITCHER ===== */
+/* THEME SWITCHER */
 .theme-switcher {
   position: fixed;
   top: 20px;
@@ -424,7 +424,7 @@ h6 {
   transform: rotate(90deg);
 }
 
-/* ===== HEADER & NAVBAR ===== */
+/* HEADER and NAVBAR */
 header {
   position: relative;
   overflow: hidden;
@@ -512,7 +512,7 @@ header {
   font-size: 1.5rem;
 }
 
-/* ===== BANNER ===== */
+/* BANNER */
 .banner {
   max-width: 1200px;
   margin: 50px auto 0;
@@ -734,7 +734,7 @@ header {
   color: var(--text-secondary);
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 main > section {
   padding: 100px 0;
   position: relative;
@@ -1628,7 +1628,7 @@ tr:last-child td {
   color: var(--primary-color);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
   background: var(--surface-color);
   padding-top: 80px;
@@ -1772,7 +1772,7 @@ footer {
   color: var(--primary-color);
 }
 
-/* ===== BACK TO TOP ===== */
+/* BACK TO TOP */
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -1805,7 +1805,7 @@ footer {
   box-shadow: var(--shadow-lg);
 }
 
-/* ===== ANIMATIONS ===== */
+/* ANIMATIONS */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -1828,7 +1828,7 @@ footer {
   }
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* RESPONSIVE DESIGN */
 
 /* Mobile Devices */
 @media screen and (max-width: 768px) {
@@ -1836,7 +1836,7 @@ footer {
     padding: 0 15px;
   }
 
-  /* ===== MOBILE NAVBAR ===== */
+  /* MOBILE NAVBAR */
   .navbar {
     position: relative;
     padding: 15px 20px;
@@ -1948,7 +1948,7 @@ footer {
     display: none;
   }
 
-  /* ===== EXISTING MOBILE STYLES ===== */
+  /* EXISTING MOBILE STYLES */
   .banner {
     flex-direction: column;
     gap: 40px;
@@ -2098,5 +2098,5 @@ footer {
 
 /* Large Devices */
 @media screen and (min-width: 1025px) {
-  /* Add large device styles here */
+  /* Added maybe letter:--------> large device styles here */
 }

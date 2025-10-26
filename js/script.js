@@ -1,14 +1,11 @@
-// Fitness Pro - JavaScript Code
+// Fitness Pro | JavaScript Code Is Here
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Loading Screen
   const loadingScreen = document.querySelector(".loading-screen");
 
-  // Simulate loading time
   setTimeout(() => {
     loadingScreen.classList.add("fade-out");
 
-    // Remove loading screen from DOM after fade out
     setTimeout(() => {
       loadingScreen.style.display = "none";
     }, 500);
@@ -27,37 +24,28 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       const theme = this.getAttribute("data-theme");
       document.documentElement.setAttribute("data-theme", theme);
-
-      // Store theme preference in localStorage
       localStorage.setItem("fitness-theme", theme);
-
-      // Close theme switcher after selection
       themeSwitcher.classList.remove("active");
     });
   });
-
-  // Load saved theme from localStorage
   const savedTheme = localStorage.getItem("fitness-theme");
   if (savedTheme) {
     document.documentElement.setAttribute("data-theme", savedTheme);
   }
 
-  // Mobile Menu Functionality
+  // Mobile Menu
   const menubar = document.querySelector(".menubar");
   const navLinks = document.querySelector(".nav-links");
   const navOverlay = document.createElement("div");
   const navClose = document.createElement("button");
 
-  // Create overlay for mobile menu
   navOverlay.className = "nav-overlay";
   document.body.appendChild(navOverlay);
 
-  // Create close button for mobile menu
   navClose.className = "nav-close";
   navClose.innerHTML = '<i class="fas fa-times"></i>';
   navLinks.appendChild(navClose);
 
-  // Toggle mobile menu
   function toggleMobileMenu() {
     navLinks.classList.toggle("active");
     navOverlay.classList.toggle("active");
@@ -66,12 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
       : "";
   }
 
-  // Event listeners for mobile menu
   menubar.addEventListener("click", toggleMobileMenu);
   navClose.addEventListener("click", toggleMobileMenu);
   navOverlay.addEventListener("click", toggleMobileMenu);
 
-  // Close mobile menu when clicking on a link
   const navItems = document.querySelectorAll(".nav-link");
   navItems.forEach((item) => {
     item.addEventListener("click", function () {
@@ -81,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close mobile menu on window resize
   window.addEventListener("resize", function () {
     if (window.innerWidth > 768) {
       navLinks.classList.remove("active");
@@ -90,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Active Navigation Link
   const sections = document.querySelectorAll("main section");
   const navLinksArray = document.querySelectorAll(".nav-link");
 
@@ -108,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
   setActiveLink();
   window.addEventListener("scroll", setActiveLink);
 
-  // Back to Top Button
   const backToTop = document.getElementById("backToTop");
 
   window.addEventListener("scroll", function () {
@@ -149,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const bmi = weight / (heightInMeters * heightInMeters);
     const roundedBmi = bmi.toFixed(1);
 
-    // Determine BMI category
+    // Determine BMI Category
     let category = "";
     let color = "";
 
@@ -181,14 +164,12 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
 
-    // Add animation
     bmiResult.style.animation = "pulse 0.5s ease";
     setTimeout(() => {
       bmiResult.style.animation = "";
     }, 500);
   });
 
-  // Testimonials Slider
   const testimonials = document.querySelectorAll(".testimonial");
   const prevBtn = document.querySelector(".testimonial-prev");
   const nextBtn = document.querySelector(".testimonial-next");
@@ -219,7 +200,6 @@ document.addEventListener("DOMContentLoaded", function () {
     showTestimonial(newIndex);
   });
 
-  // Auto-rotate testimonials
   let testimonialInterval = setInterval(() => {
     let newIndex = currentTestimonial + 1;
     if (newIndex >= testimonials.length) {
@@ -228,7 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
     showTestimonial(newIndex);
   }, 5000);
 
-  // Pause auto-rotation on hover
   const testimonialSlider = document.querySelector(".testimonials-slider");
   testimonialSlider.addEventListener("mouseenter", () => {
     clearInterval(testimonialInterval);
@@ -247,25 +226,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Pricing Toggle
   const pricingToggle = document.getElementById("pricingToggle");
   const monthlyPrices = [29, 59, 99];
-  const yearlyPrices = [23.2, 47.2, 79.2]; // 20% discount
+  const yearlyPrices = [23.2, 47.2, 79.2];
 
   pricingToggle.addEventListener("change", function () {
     const prices = document.querySelectorAll(".price .amount");
 
     if (this.checked) {
-      // Yearly pricing
       prices.forEach((price, index) => {
         price.textContent = yearlyPrices[index];
       });
     } else {
-      // Monthly pricing
       prices.forEach((price, index) => {
         price.textContent = monthlyPrices[index];
       });
     }
   });
 
-  // Animate elements on scroll
   const animateOnScroll = function () {
     const elements = document.querySelectorAll(
       ".feature-card, .card-habit, .program-card, .meet-trainer, .pricing-card"
@@ -282,7 +258,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  // Set initial state for animation
   const animatedElements = document.querySelectorAll(
     ".feature-card, .card-habit, .program-card, .meet-trainer, .pricing-card"
   );
@@ -293,10 +268,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.addEventListener("scroll", animateOnScroll);
-  // Trigger once on load
   animateOnScroll();
 
-  // Form Validation for Newsletter
+  // Validation
   const newsletterForm = document.querySelector(".newsletter-form");
   if (newsletterForm) {
     newsletterForm.addEventListener("submit", function (e) {
@@ -304,7 +278,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const emailInput = this.querySelector('input[type="email"]');
 
       if (emailInput.value && isValidEmail(emailInput.value)) {
-        // Simulate successful subscription
         emailInput.value = "";
         showNotification(
           "Successfully subscribed to our newsletter!",
@@ -316,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Helper function to validate email
+  // Function to validate email
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -335,7 +308,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
 
-    // Add styles for notification
+    // Added Notification
     notification.style.cssText = `
       position: fixed;
       top: 20px;
@@ -360,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
       notification.style.transform = "translateX(0)";
     }, 100);
 
-    // Remove after 5 seconds
+    // Remove after 4 seconds
     setTimeout(() => {
       notification.style.transform = "translateX(150%)";
       setTimeout(() => {
@@ -368,10 +341,10 @@ document.addEventListener("DOMContentLoaded", function () {
           notification.parentNode.removeChild(notification);
         }
       }, 300);
-    }, 5000);
+    }, 4000);
   }
 
-  // Counter Animation for Stats
+  // Counter Animation
   const stats = document.querySelectorAll(".stat-number");
   let animated = false;
 
@@ -405,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Trigger on load
   animateStats();
 
-  // Parallax Effect for Banner
+  // Parallax Banner
   window.addEventListener("scroll", function () {
     const scrolled = window.pageYOffset;
     const banner = document.querySelector(".banner");
@@ -418,7 +391,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Interactive Floating Elements
   const floatingCards = document.querySelectorAll(".floating-card");
 
   floatingCards.forEach((card) => {
@@ -431,12 +403,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add click effects to buttons
   const buttons = document.querySelectorAll("button");
 
   buttons.forEach((button) => {
     button.addEventListener("click", function (e) {
-      // Create ripple effect
       const ripple = document.createElement("span");
       const rect = this.getBoundingClientRect();
       const size = Math.max(rect.width, rect.height);
@@ -457,14 +427,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       this.appendChild(ripple);
 
-      // Remove ripple after animation
       setTimeout(() => {
         ripple.remove();
       }, 600);
     });
   });
 
-  // Add CSS for ripple effect
   const style = document.createElement("style");
   style.textContent = `
     @keyframes ripple {
