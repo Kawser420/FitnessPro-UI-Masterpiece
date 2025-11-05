@@ -1,5 +1,5 @@
 // Fitness Pro | JavaScript Code Is Here
-
+// ------------------------------------------------------------------------------------>
 document.addEventListener("DOMContentLoaded", function () {
   const loadingScreen = document.querySelector(".loading-screen");
 
@@ -444,3 +444,6 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.head.appendChild(style);
 });
+
+// End
+// ------------------------------------------------------------------------------------------------->

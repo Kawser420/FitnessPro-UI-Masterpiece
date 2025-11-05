@@ -1,3 +1,5 @@
+/* CSS  */
+/* ---------------------------------------------------------------------------------- */
 /* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800andfamily=Poppins:wght@300;400;500;600;700;800;900anddisplay=swap");
 
@@ -2098,5 +2100,6 @@ footer {
 
 /* Large Devices */
 @media screen and (min-width: 1025px) {
+  /* And this: */
   /* Added maybe letter:--------> large device styles here */
 }
